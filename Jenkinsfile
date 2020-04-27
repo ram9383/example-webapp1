@@ -62,7 +62,7 @@ pipeline {
         }
 
  
-        stage('Deploy to Production fixed server') {
+        stage('Deploy to Production server just for sake') {
             when {
                 branch 'release'
             }
