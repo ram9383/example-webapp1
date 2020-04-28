@@ -77,7 +77,7 @@ pipeline {
             }
         }
 		
-		stage('Deploy to Production Ram Triggery') {
+		stage('Deploy to Production Ram Triggery Pandy') {
             when {
                 branch 'master'
             }
