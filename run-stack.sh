@@ -17,7 +17,7 @@ aws cloudformation deploy \
     --stack-name $STACK_NAME \
     --template-file service.yaml \
     --capabilities CAPABILITY_NAMED_IAM \
-    --parameters \
+    --parameter-overrides \
     "DockerImage=023586244730.dkr.ecr.us-east-2.amazonaws.com/example-webapp:$(git rev-parse HEAD)" \
 	"Subnet=subnet-4c8a7527" \
     "VPC=vpc-d28a5db9" \
