@@ -127,6 +127,8 @@ Resources:
                                     "elasticloadbalancing:DescribeTargetGroups",
                                     "elasticloadbalancing:DescribeTargetHealth",
                                     "elasticloadbalancing:RegisterTargets"
+                                    "logs:CreateLogStream"
+                                    "logs:PutLogEvents"
                                 ],
                                 "Resource": "*"
                         }]
