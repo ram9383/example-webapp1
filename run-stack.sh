@@ -13,9 +13,9 @@ else
 fi
 
 aws cloudformation create-change-set \
-	--change-set-name StackChangeSet	
     --region us-east-2 \
     --stack-name $STACK_NAME \
+	--change-set-name StackChangeSet \
     --template-file service.yaml \
     --capabilities CAPABILITY_NAMED_IAM \
     --parameter-overrides \
@@ -27,7 +27,7 @@ aws cloudformation create-change-set \
 
 
 aws cloudformation execute-change-set \
-	--change-set-name StackChangeSet
+	--change-set-name StackChangeSet \
     --region us-east-2 \
     --stack-name $STACK_NAME \
     --template-file service.yaml \
