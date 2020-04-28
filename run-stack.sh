@@ -21,7 +21,7 @@ aws cloudformation deploy \
     "DockerImage=023586244730.dkr.ecr.us-east-2.amazonaws.com/example-webapp:$(git rev-parse HEAD)" \
 	"Subnet=subnet-4c8a7527" \
     "VPC=vpc-d28a5db9" \
-    "Cluster=default" \
+    "Cluster=example-webapp" \
     "Listener=$ALB_LISTENER_ARN"
 	
 aws cloudformation wait $finished_check --region us-east-2 --stack-name $STACK_NAME 
