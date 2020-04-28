@@ -15,7 +15,7 @@ ALB_LISTENER_ARN=$2
 aws cloudformation deploy \
     --region us-east-2 \
     --stack-name $STACK_NAME \
-    --template-body service.yaml \
+    --template-file service.yaml \
     --capabilities CAPABILITY_NAMED_IAM \
     --parameters \
     "DockerImage=023586244730.dkr.ecr.us-east-2.amazonaws.com/example-webapp:$(git rev-parse HEAD)" \
