@@ -86,6 +86,7 @@ pipeline {
                 script {
                     PRODUCTION_ALB_LISTENER_ARN="arn:aws:elasticloadbalancing:us-east-2:023586244730:listener/app/production-website/f97c1a59cd6c402e/b663072bad3b0a73"
                     sh """
+					chmod 777 run-stack.sh
                     ./run-stack.sh example-webapp-production ${PRODUCTION_ALB_LISTENER_ARN}
                     """
                 }
